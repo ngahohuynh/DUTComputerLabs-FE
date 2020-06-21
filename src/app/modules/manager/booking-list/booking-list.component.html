@@ -41,7 +41,7 @@
           <button type="button" (click)="onDetail(booking.id)">
             <mat-icon>subject</mat-icon>
           </button>
-          <button type="button" [routerLink]="['notice', booking.id]" routerLinkActive="active" >
+          <button type="button" (click)="onNotice(booking.id)">
             <mat-icon>announcement</mat-icon>
           </button>
           <button type="button" (click)="onDelete(booking.id)">

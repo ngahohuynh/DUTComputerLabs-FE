@@ -11,6 +11,10 @@ import { BookingListResolver } from './resolvers/booking-list.resolver';
 import { ManagerListResolver } from './resolvers/manager-list.resolver';
 import { LecturerListResolver } from './resolvers/lecturer-list.resolver';
 import { UserResolver } from './resolvers/user.resolver';
+import { BookingService } from './services/booking.service';
+import { UserService } from './services/user.service';
+import { NotificationService } from './services/notification.service';
+import { NotificationListResolver } from './resolvers/notification-list.resolver';
 
 @NgModule({
     declarations: [],
@@ -28,12 +32,16 @@ import { UserResolver } from './resolvers/user.resolver';
         AuthService,
         AlertifyService,
         ComputerLabService,
+        BookingService,
+        UserService,
+        NotificationService,
         ComputerLabListResolver,
         ComputerLabResolver,
         BookingListResolver,
         ManagerListResolver,
         LecturerListResolver,
-        UserResolver
+        UserResolver,
+        NotificationListResolver
     ]
 })
 export class CoreModule {

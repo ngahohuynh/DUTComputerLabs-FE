@@ -15,6 +15,8 @@ import { ManagerListResolver } from './core/resolvers/manager-list.resolver';
 import { LecturerListResolver } from './core/resolvers/lecturer-list.resolver';
 import { UserEditComponent } from './modules/admin/user-edit/user-edit.component';
 import { UserResolver } from './core/resolvers/user.resolver';
+import { NotificationListComponent } from './modules/manager/notification-list/notification-list.component';
+import { NotificationListResolver } from './core/resolvers/notification-list.resolver';
 
 
 const routes: Routes = [
@@ -35,6 +37,9 @@ const routes: Routes = [
   },
   {
     path: 'labs/:id', component: ComputerLabEditComponent, resolve: {lab: ComputerLabResolver}
+  },
+  {
+    path: 'notices', component: NotificationListComponent, resolve: {notices: NotificationListResolver}
   },
   {
     path: 'bookings', component: BookingListComponent, resolve: {bookings: BookingListResolver}

@@ -11,13 +11,17 @@ import { RouterModule } from '@angular/router';
 import { ComputerLabEditComponent } from './computer-lab-edit/computer-lab-edit.component';
 import { BookingListComponent } from './booking-list/booking-list.component';
 import { BookingDetailComponent } from './booking-detail/booking-detail.component';
+import { NotificationListComponent } from './notification-list/notification-list.component';
+import { NotificationAddComponent } from './notification-add/notification-add.component';
 
 @NgModule({
     declarations: [
         ComputerLabListComponent,
         ComputerLabEditComponent,
         BookingListComponent,
-        BookingDetailComponent
+        BookingDetailComponent,
+        NotificationListComponent,
+        NotificationAddComponent
     ],
     imports: [
         SharedModule,
@@ -35,7 +39,9 @@ import { BookingDetailComponent } from './booking-detail/booking-detail.componen
         ComputerLabListComponent,
         ComputerLabEditComponent,
         BookingListComponent,
-        BookingDetailComponent
+        BookingDetailComponent,
+        NotificationListComponent,
+        NotificationAddComponent
     ]
 })
 export class ManagerModule {

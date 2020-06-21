@@ -7,6 +7,7 @@ import { Booking } from 'src/app/shared/models/booking';
 import { BookingService } from 'src/app/core/services/booking.service';
 import { MatDialog } from '@angular/material/dialog';
 import { BookingDetailComponent } from '../booking-detail/booking-detail.component';
+import { NotificationAddComponent } from '../notification-add/notification-add.component';
 
 @Component({
   selector: 'app-booking-list',
@@ -50,6 +51,12 @@ export class BookingListComponent implements OnInit {
   public onDetail(id: number): void {
     this.dialog.open(BookingDetailComponent, {
       data: {booking: this.bookings.find(b => b.id === id)}
+    });
+  }
+
+  public onNotice(id: number): void {
+    this.dialog.open(NotificationAddComponent, {
+      data: {bookingId: id}
     });
   }
 

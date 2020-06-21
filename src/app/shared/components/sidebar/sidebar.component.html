@@ -11,6 +11,7 @@
     <mat-nav-list *ngIf="authService.currentUser?.role === 'MANAGER'">
       <a mat-list-item [routerLink]="['labs']" routerLinkActive="active" >Quản lý phòng máy</a>
       <a mat-list-item [routerLink]="['bookings']" routerLinkActive="active" >Quản lý lịch đặt phòng</a>
+      <a mat-list-item [routerLink]="['/notices']" routerLinkActive="active">Thông báo đã gửi</a> 
       <a mat-list-item href="#">Thống kê</a>
     </mat-nav-list>
 
