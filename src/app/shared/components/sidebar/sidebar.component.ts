@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { User } from '../../models/user';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,7 +12,7 @@ import { User } from '../../models/user';
 })
 export class SidebarComponent {
 
-  // currentUser: User;
+  @ViewChild('drawer') drawer: MatSidenav;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -21,5 +21,12 @@ export class SidebarComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver, public authService: AuthService) { }
+
+  loggedIn(): boolean {
+    if (!this.authService.loggedIn()) {
+      this.drawer.close();
+    }
+    return this.authService.loggedIn();
+  }
 
 }

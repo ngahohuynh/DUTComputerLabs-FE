@@ -16,7 +16,7 @@ import { NotificationAddComponent } from '../notification-add/notification-add.c
 export class NotificationListComponent implements OnInit {
 
   public dataSource: MatTableDataSource<Notice>;
-  public displayedColumns: string[] = ['id', 'date', 'content', 'actions'];
+  public displayedColumns: string[] = ['date', 'content'];
 
   private notices: Notice[];
 
@@ -45,14 +45,6 @@ export class NotificationListComponent implements OnInit {
           this.pagination = result.pagination;
           this.dataSource = new MatTableDataSource(this.notices);
         });
-  }
-
-  public onDetail(id: number): void {
-
-  }
-
-  public onDelete(id: number): void {
-
   }
 
 }
