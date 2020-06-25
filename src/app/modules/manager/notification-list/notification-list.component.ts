@@ -23,7 +23,7 @@ export class NotificationListComponent implements OnInit {
   public pagination: Pagination;
 
   constructor(private notificationService: NotificationService, private alertify: AlertifyService,
-              private route: ActivatedRoute, private router: Router, private dialog: MatDialog) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {

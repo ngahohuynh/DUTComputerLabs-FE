@@ -20,7 +20,6 @@ export class ErrorHandlingInterceptor implements HttpInterceptor {
                         this.alertify.error('An error occurred');
                     }
                 }
-                this.router.navigate(['/home']);
                 return of(err);
             }));
 
